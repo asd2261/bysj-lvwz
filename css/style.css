@@ -1,0 +1,61 @@
+
+
+/*作业--21计应4---11.24\作业--21计应4---11.24\css\style.css 注释 */
+nav, article, footer
+{   
+   display: block;   
+}  
+
+h1.title{
+	font-size: 0!important;
+	line-height: 0!important;
+	margin-bottom: 0!important;
+}
+.index-h2 {
+	font-size: calc(1rem + 1vw); 
+	text-align: center;
+	letter-spacing: 1px;
+	color: #ff00f6;
+}
+.index-h2-p {
+	font-size: calc(0.7rem + 0.8vw); 
+	text-align: center;
+	letter-spacing: 1px;
+	color: #999;
+}
+.publish .row {
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
+  }
+@media (min-width: 1200px) {
+	.index-h2 {
+		font-size: 220%;
+	}
+	.index-h2-p {
+		font-size: 160%;
+	}
+}
+
+/* 当进入超小屏幕的时候 修改相应元素的样式 */
+@media screen and (max-width: 767px) {
+    .publish h3 {
+        font-size: 14px;
+    }
+    p.text-muted{
+    	font-size: 14px;
+    	margin-bottom: 0;
+	}
+	.index-h2{
+		margin-top: 1rem;
+	}
+	.index-h2-p{
+		margin-bottom: 1.5rem!important;
+	}
+	.skill{
+		margin-bottom: 0.5rem!important;
+	}
+	.carousel-indicators{
+		bottom:-10px ;
+	}
+}
+

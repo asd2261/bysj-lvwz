@@ -1,0 +1,90 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#login_area{
+	width: 100%;
+	height: 433px;
+	position: absolute;
+	top: 22%;
+}
+#login_box{
+	margin: 0 auto;
+	width: 812px;
+	height: 408px;
+	position: relative;
+	background-image: url(../images/bj.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+#login_title{
+	width: 370px;
+	height: 200px;
+	float:left;
+	margin-top: 120px;
+	padding:50px;
+	font-size:36px;
+	font-family:"微软雅黑";
+}
+#login_form{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 100px;
+	left:390px;
+}
+#login_name,#login_pass,#login_check{
+	width: 300px;
+	height: 50px;
+	position: relative;
+	}
+.text{font-size:14px;}
+.inputbox{
+	height:30px;
+	width: 180px;
+	line-height:30px;
+	border: 1px solid;
+	border-color: #C0C0C0 #D9D9D9 #D9D9D9;
+	border-radius: 2px;
+	background: #FFF;
+	float: left;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0
+		rgba(255, 255, 255, 0.2);
+	-webkit-transition: box-shadow, border-color .5s ease-in-out;
+	-moz-transition: box-shadow, border-color .5s ease-in-out;
+	-o-transition: box-shadow, border-color .5s ease-in-out;
+}
+.yzm{
+	width: 100px;
+	float: left;
+}
+#btn_area {
+	margin-top: 20px;
+	margin-left: 10px;
+}
+.login_btn {
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-style: none;
+	cursor: pointer;
+	font-family: "Microsoft YaHei", "微软雅黑", "sans-serif";
+	background: url('../images/btn.png') 0px -1px no-repeat;
+}
+
+.login_btn:hover {
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-style: none;
+	cursor: pointer;
+	font-family: "Microsoft YaHei", "微软雅黑", "sans-serif";
+	color: #fff;
+	background-image: url('../images/btn_hover.png');
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
