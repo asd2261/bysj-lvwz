@@ -1,4 +1,5 @@
 <!doctype html>
+<?php require 'conn.php';?>
 <html>
  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +15,11 @@
   <!-- 引入我们自己的首页样式文件 -->
   <link rel="stylesheet" href="css/style.css">
  
-  <script src="bootstrap/js/jquery.min.js"></script>
-  <!-- <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script> -->
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+
   
 </style>
 <body>
-     <div class="col-sm-4">
+     <div class="col-lg-4 col-md-6">
         <div class="card shadow-sm my-2 h-100">
             <div class="card-body">
                 <h5 class="card-title d-flex justify-content-between align-items-center">
@@ -33,8 +32,9 @@
                     $sql2 = "select content from news";
                     $result2 = mysqli_query($conn, $sql2);
                     $rows2 = mysqli_fetch_array($result2);
-                    echo mb_substr($rows2['content'], 0, 260, 'utf-8') . '...';
+                    echo mb_substr($rows2['content'], 0, 250, 'utf-8') . '...';
                     ?>
+                    
                 </p>
             </div>
         </div>

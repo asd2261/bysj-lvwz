@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="bootstrap/js/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+  
     <title>当前位置&gt;&gt;旅游路线</title>
     <style>
         /* 设置卡片为Flexbox布局 */
@@ -67,7 +66,7 @@ color: black;
         <div class="d-flex align-items-center">
             <h5 title="单击 即可返回首页 ！！">
                 <img src="images/zxtb.fw.png" width="28" height="25" alt="">&nbsp; &nbsp;
-                <a href="index3.php" class="ml-auto" style="color: #000; text-decoration: none;"
+                <a href="index.php" class="ml-auto" style="color: #000; text-decoration: none;"
                     onmouseover="this.style.color='red'" onmouseout="this.style.color='#000'">当前位置
                 &gt;&gt;旅游路线
             </a></h5>
@@ -93,7 +92,7 @@ color: black;
 						  ?>
 						  <tr>
 						  <td width="20" height="35">&hearts;</td>
-						  <td style="text-align: left !important; padding-left: 25px; padding-top: 7px; padding-bottom: 7px;"><a href="gdxzschak.php?id=<?php echo $rows3['id']?>"><?php  echo $rows3["title"]; ?></a></td>
+						  <td style="text-align: left !important; padding-left: 25px; padding-top: 7px; padding-bottom: 7px;"><a href="xqlylx.php?id=<?php echo $rows3['id']?>"><?php  echo $rows3["title"]; ?></a></td>
 						  <td><?php echo $rows3["date"]?></td>
 					    </tr>
 						  <?php }?>

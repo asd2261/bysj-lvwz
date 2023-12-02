@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <?php require 'conn.php';?>
-    <?php
-$sql = "SELECT * FROM news WHERE id = 1 ORDER BY date DESC LIMIT 1";
-	$result=mysqli_query($conn,$sql);
+  <?php
+     $id=$_GET["id"];
+     $sql="select * from news where id=$id";
+     $result=mysqli_query($conn,$sql);
      $rows=mysqli_fetch_array($result);
     ?>
 
@@ -23,7 +24,7 @@ $sql = "SELECT * FROM news WHERE id = 1 ORDER BY date DESC LIMIT 1";
   <!-- 引入我们自己的首页样式文件 -->
   <link rel="stylesheet" href="css/style.css">
 
-  <title>当前位置&gt;&gt;公司简介</title>
+  <title>当前位置&gt;&gt;最新资讯&gt;&gt;详情</title>
     
     <style>
   /* 设置卡片为Flexbox布局 */
@@ -56,8 +57,12 @@ $sql = "SELECT * FROM news WHERE id = 1 ORDER BY date DESC LIMIT 1";
 .card-text.text-justify {
   margin-top: 35px;
 }
-        
+      
+     
   </style>  
+    
+    
+    
     
 </head>
   
@@ -69,11 +74,11 @@ $sql = "SELECT * FROM news WHERE id = 1 ORDER BY date DESC LIMIT 1";
 <div class="container mt-5">
     
  <div class="d-flex align-items-center">
-			  <h5 title="单击 即可返回首页 ！！">
+			  <h5 title="单击 即可返回上一页 ！！">
                 <img src="images/zxtb.fw.png" width="28" height="25" alt="">&nbsp; &nbsp;
-                <a href="index.php" class="ml-auto" style="color: #000; text-decoration: none;"
+                <a href="gdzx.php?page=1" class="ml-auto" style="color: #000; text-decoration: none;"
                     onmouseover="this.style.color='red'" onmouseout="this.style.color='#000'">当前位置
-                &gt;&gt;公司简介
+                &gt;&gt;最新资讯&gt;&gt;详情
             </a></h5>
     </div>
     
@@ -106,6 +111,7 @@ $sql = "SELECT * FROM news WHERE id = 1 ORDER BY date DESC LIMIT 1";
             ?>
             
           </p>
+       
         </div>
         
       </div>
@@ -115,8 +121,9 @@ $sql = "SELECT * FROM news WHERE id = 1 ORDER BY date DESC LIMIT 1";
   </div>
 
 </div>
-    
+ <!--侧边一键分享-->
        <script type="text/javascript" id="bdshare_js" data="type=slide&img=6&pos=right&uid=39728" src="//www.pc6.com/static/js/bds_s_v2.js?cdnversion=430667"></script>
+
     
     <table width="1400" border="0" cellspacing="0" cellpadding="0">
 		  <tbody>

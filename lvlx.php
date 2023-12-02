@@ -13,19 +13,17 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <!-- 引入我们自己的首页样式文件 -->
   <link rel="stylesheet" href="css/style.css">
-  <script src="bootstrap/js/jquery.min.js"></script>
-  <!-- <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script> -->
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+
 <body>
     
     
-         <div class="col-sm-4">
+        <div class="col-lg-4 col-md-6">
         <div class="card shadow-sm my-2 h-100">
             <div class="card-body">
                 <h5 class="card-title d-flex justify-content-between align-items-center">
                     <img src="images/zxtb.fw.png" width="25" height="22" alt=""/>
                     旅游路线
-                    <a href="gdlvlx.php?page=1" class="ml-auto" style="color: #000; text-decoration: none;" onmouseover="this.style.color='red'" onmouseout="this.style.color='#000'">更多&gt;&gt;</a>
+                    <a href="gdzx.php?page=1" class="ml-auto" style="color: #000; text-decoration: none;" onmouseover="this.style.color='red'" onmouseout="this.style.color='#000'">更多&gt;&gt;</a>
                 </h5>
                 <p class="card-text">
                           <tr>
@@ -51,7 +49,7 @@
 			                </table>
 								
 						  </td>
-			              <td width="352"><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="gdxzschak.php?id=<?php echo $rows3["id"]?>" style="color: #000; text-decoration: none;" onmouseover="this.style.color='red'" onmouseout="this.style.color='#000'"><?php echo $rows3["title"];?></a></td>
+			              <td width="352"><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="xqlylx.php?id=<?php echo $rows3["id"]?>" style="color: #000; text-decoration: none;" onmouseover="this.style.color='red'" onmouseout="this.style.color='#000'"><?php echo $rows3["title"];?></a></td>
 		                </tr>
 			            <?php }?>
 			          </table>

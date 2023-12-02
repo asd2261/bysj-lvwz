@@ -14,9 +14,11 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <!-- 引入我们自己的首页样式文件 -->
   <link rel="stylesheet" href="css/style.css">
+ 
   <script src="bootstrap/js/jquery.min.js"></script>
   <!-- <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script> -->
   <script src="bootstrap/js/bootstrap.min.js"></script>
+  
 </style>
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -30,29 +32,26 @@
   	 
   	 <div class="collapse navbar-collapse" id="mynav">
   	 	  <ul class="navbar-nav">
-  	 	  	 <li class="nav-item"><a href="index.php" class="nav-link">首页</a></li>
-  	 	  	 <li class="nav-item"><a href="gdgsjj.php" class="nav-link">公司简介</a></li>
-  	 	  	 <li class="nav-item"><a href="gdzx.php?page=1" class="nav-link">最新资讯</a></li>
-  	 	  	 <li class="nav-item"><a href="gdlvlx.php?page=1" class="nav-link">旅游路线</a></li>
-              <li class="nav-item"><a href="gdsjlt.php?page=1" class="nav-link">视觉旅途</a></li>
-  	 	  	 <li class="nav-item"><a href="#" class="nav-link">关注我们</a></li>
+  	 	 
+              <li class="nav-item"><a href="index.php" class="nav-link">首页</a></li>
+              	<?php 
+					$result=mysqli_query($conn,"select * from class where uid=0");
+					while($arr=mysqli_fetch_array($result)){
+				?>
+              		<li  class="nav-item"><a href="#" class="nav-link"><?php echo $arr["classname"];?></a></li>
+              		<?php }?>
+              
+              
   	 	  </ul>
   	 	  
-  	 	<form onsubmit="showAlert()" class="ml-auto">
-        <div class="input-group">
-            <input type="text" name="query" class="form-control" placeholder="请输入搜索内容">
-            <div class="input-group-append">
-                <button type="submit" class="btn btn-danger">搜索<i class="fa fa-search ml-1"></i></button>
-            </div>
-        </div>
-    </form>
-
-    <script>
-        function showAlert() {
-            alert("当前功能暂不可用！");
-            return false; // 阻止表单提交
-        }
-    </script>
+  	 	  <form class="ml-auto">
+  	 	  	 <div class="input-group">
+  	 	  	 	 <input type="text" class="form-control" placeholder="请输入搜索内容">
+  	 	  	 	 <div class="input-group-append">
+  	 	  	 	   	<button class="btn btn-danger">搜索<i class="fa fa-search ml-1"></i></button>
+  	 	  	 	 </div>
+  	 	  	 </div>
+  	 	  </form>
   	 	  
   	 </div>
   	 
@@ -86,7 +85,5 @@
          <span class="carousel-control-next-icon" aria-hidden="true"></span>
       </a>
    </div>
-  
-    
 </body>
 </html>

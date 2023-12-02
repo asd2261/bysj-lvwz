@@ -1,7 +1,4 @@
-
-
-/*作业--21计应4---11.24\作业--21计应4---11.24\css\style.css 注释 */
-nav, article, footer
+.nav, article, footer
 {   
    display: block;   
 }  
@@ -57,5 +54,4 @@ h1.title{
 	.carousel-indicators{
 		bottom:-10px ;
 	}
-}
 
