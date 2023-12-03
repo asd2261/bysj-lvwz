@@ -1,3 +1,4 @@
+<?php require_once('yz.php'); ?>
 <html>
 <head>
 <meta charset="utf-8">

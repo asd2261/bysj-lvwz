@@ -1,3 +1,4 @@
+<?php require_once('yz.php'); ?>
 <?php
 define('GUY','true');
 require 'common.inc.php';

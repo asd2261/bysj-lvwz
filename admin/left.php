@@ -1,3 +1,4 @@
+<?php require_once('yz.php'); ?>
 <!doctype html>
 <html>
 <head>
@@ -36,7 +37,7 @@
 			<li class="leftin"><a href="adminlook.php" target="main">管理员列表</a></li>		
 		</ul>		
 	</li>	
-	<li><a href="exit.php" target="_top">退出</a></li>
+	<li><a href="exit.php?action=exit" target="_top">退出</a></li>
 </ul>
 </body>
 </html>

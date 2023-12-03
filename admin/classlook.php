@@ -1,3 +1,4 @@
+<?php require_once('yz.php'); ?>
 <?php
 include("conn.php");
 

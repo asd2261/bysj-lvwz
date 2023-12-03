@@ -1,6 +1,7 @@
 <?php 
 include("conn.php");
 ?>
+<?php require_once('yz.php'); ?>
 <!doctype html>
 <html>
 <head>
