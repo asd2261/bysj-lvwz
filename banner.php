@@ -29,15 +29,26 @@
   	 </button>
   	 
   	 <div class="collapse navbar-collapse" id="mynav">
-  	 	  <ul class="navbar-nav">
+  	 	  <!-- <ul class="navbar-nav">
   	 	  	 <li class="nav-item"><a href="index.php" class="nav-link">首页</a></li>
   	 	  	 <li class="nav-item"><a href="gdgsjj.php" class="nav-link">公司简介</a></li>
   	 	  	 <li class="nav-item"><a href="gdzx.php?page=1" class="nav-link">最新资讯</a></li>
   	 	  	 <li class="nav-item"><a href="gdlvlx.php?page=1" class="nav-link">旅游路线</a></li>
               <li class="nav-item"><a href="gdsjlt.php?page=1" class="nav-link">视觉旅途</a></li>
   	 	  	 <li class="nav-item"><a href="#" class="nav-link">关注我们</a></li>
-  	 	  </ul>
+  	 	  </ul> -->
   	 	  
+<ul class="navbar-nav">
+    <li class="nav-item"><a href="index.php" class="nav-link">首页</a></li>
+    <?php 
+    $result = mysqli_query($conn, "SELECT * FROM class WHERE uid=0");
+    while ($arr = mysqli_fetch_array($result)) {
+        ?>
+        <li class="nav-item"><a href="<?php echo htmlspecialchars($arr["lj"]); ?>" class="nav-link"><?php echo htmlspecialchars($arr["classname"]); ?></a></li>
+    <?php } ?>
+</ul>
+
+          
   	 	<form onsubmit="showAlert()" class="ml-auto">
         <div class="input-group">
             <input type="text" name="query" class="form-control" placeholder="请输入搜索内容">

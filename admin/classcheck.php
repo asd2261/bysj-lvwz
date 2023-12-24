@@ -23,14 +23,17 @@ echo"<script>alert('不能为空');location.href='addclass.php';</script>";
 		       $result1=mysqli_query($conn,$sql1);
 		       $rows1 = mysqli_fetch_array($result1);
 		       $typeid=$rows1["typeid"]+1;
-		       $sql="insert into class(uid,typeid,classname) values ({$id},{$typeid},'{$classname}')";
+		       $sql="insert into class(uid,typeid,classname) values ('{$id}','{$typeid}','{$classname}')";
 		      $result=mysqli_query($conn,$sql);
-                }
+                
+			}
 	          if($result){
 	            echo"<script>alert('添加成功');location.href='addclass.php';</script>";
                 }
                   else{
-		       echo"<script>alert('添加失败');location.href='addclass.php';</script>";
+		      echo"<script>alert('添加失败');location.href='addclass.php';</script>";
+			 
+			
                        }
              }
        }	

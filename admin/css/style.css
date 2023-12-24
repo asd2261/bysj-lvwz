@@ -25,7 +25,7 @@
 	float:left;
 	margin-top: 120px;
 	padding:50px;
-	font-size:36px;
+	font-size:30px;
 	font-family:"微软雅黑";
 }
 #login_form{
@@ -88,3 +88,9 @@
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
 }
+
+/*隐藏具有id为login_ret的元素的注册按钮。
+#login_ret {
+    display: none;
+}
+*/

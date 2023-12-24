@@ -24,10 +24,10 @@
   <footer class="bg-dark text-white text-center py-4">
 	<h3>风景如画旅游网</h3>
 	<ul class="list-inline">
-		<li class="list-inline-item"><i class=" fa fa-wechat fa-2x"></i></li>
-        <li class="list-inline-item"><i class=" fa fa-envelope-o fa-2x"></i></li>
-        <li class="list-inline-item"><i class=" fa fa-phone fa-2x"></i></li>
-				<li class="list-inline-item"><i class=" fa fa-github fa-2x"></i></li>
+		<li class="list-inline-item"><a href="#"><i class=" fa fa-wechat fa-2x"></i></a></li>
+        <li class="list-inline-item"><a href="#"><i class=" fa fa-envelope-o fa-2x"></a></i></li>
+        <li class="list-inline-item"><a href="#"><i class=" fa fa-phone fa-2x"></i></a></li>
+		<li class="list-inline-item"><a href="https://github.com/asd2261"><i class=" fa fa-github fa-2x"></i></a></li>
 						
 	</ul>
 	<p>企业培训 | 合作事宜 | 版权投诉</p>

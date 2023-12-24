@@ -12,6 +12,12 @@
 	<div>
 </div>
 <ul id="left">
+    
+		<ul>
+			<li class="leftin"><a href="right.php" target="main">网站基本配置</a></li>
+			
+		</ul>
+	
 	<li><a href="#">导航分类管理</a>
 		<ul>
 			<li class="leftin"><a href="addclass.php" target="main">添加导航分类</a></li>

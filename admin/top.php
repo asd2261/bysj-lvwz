@@ -63,7 +63,7 @@
 <div id="down">
 <p class="p0"></p>
 <p class="p1"></p>
-<p class="p2"> 当前登录用户：admin  用户角色：管理员</p>
+<p class="p2"> 当前登录用户：<?php session_start(); echo  $_SESSION['username'];?>  用户角色：管理员</p>
 <ul>
   <li class="li1"></li>
 </ul>

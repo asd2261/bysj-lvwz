@@ -23,7 +23,7 @@
                 <h5 class="card-title d-flex justify-content-between align-items-center">
                     <img src="images/zxtb.fw.png" width="25" height="22" alt=""/>
                     旅游路线
-                    <a href="gdzx.php?page=1" class="ml-auto" style="color: #000; text-decoration: none;" onmouseover="this.style.color='red'" onmouseout="this.style.color='#000'">更多&gt;&gt;</a>
+                    <a href="gdlvlx.php?page=1" class="ml-auto" style="color: #000; text-decoration: none;" onmouseover="this.style.color='red'" onmouseout="this.style.color='#000'">更多&gt;&gt;</a>
                 </h5>
                 <p class="card-text">
                           <tr>
