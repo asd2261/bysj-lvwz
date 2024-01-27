@@ -1,9 +1,7 @@
-
+<?php require_once('yz.php'); ?>
 <?php
-include("conn.php");
 
-$sql="select*from class";
-$result=mysqli_query($conn,$sql);
+include("global.func.php");
 
 ?>
 
@@ -45,7 +43,7 @@ $result=mysqli_query($conn,$sql);
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- 侧边栏 - 品牌标识 -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="right.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -71,7 +69,7 @@ $result=mysqli_query($conn,$sql);
             </div>
 
             <!-- 导航项 - 页面折叠菜单 -->
-       <li class="nav-item">
+             <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNew"
         aria-expanded="true" aria-controls="collapseNew">
         <i class="fas fa-fw fa-star"></i>
@@ -250,13 +248,13 @@ $result=mysqli_query($conn,$sql);
     <!-- 下拉框 - 用户信息 -->
     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
         aria-labelledby="userDropdown">
-        <a class="dropdown-item" href="#">
+        <a class="dropdown-item" href="grzl.php?id=<?=$_SESSION["username"]?>">
             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
             个人资料
         </a>
         <a class="dropdown-item" href="#">
             <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-            设置
+            修改密码
         </a>
         <a class="dropdown-item" href="#">
             <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -278,8 +276,63 @@ $result=mysqli_query($conn,$sql);
 <!-- 顶部栏结束 -->
 <!--！！！！！！！！！！！！！！！！！！！！！！！！！！！模板开始！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
+                
+                
+             <div class="container-fluid">   
+                <div class="card shadow mb-4">
+<div class="card mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">添加导航分类(可无限分类)</h6>
+    </div>
+    <div class="card-body">
+        <form method="post" action="classcheck.php">
+            <ul class="list-unstyled">
+                <li class="mb-3">
+                    <label for="typeid">所属分类：</label>
+                    <select name="typeid" class="form-control">
+                        <option value="one">做为一级分类</option>
+                        <?php
+    include("conn.php");
+                        $sql = "SELECT id, classname FROM class WHERE typeid = 1";
+                        $result = mysqli_query($conn, $sql);
 
+                        while ($rows = mysqli_fetch_array($result)) {
+                            ?>
+                            <option value="<?php echo $rows["id"] ?>"><?php echo $rows["classname"]; ?></option>
+                            <?php
+                            trees($rows["id"], 1);
+                        }
+                        ?>
+                    </select>
+                </li>
+                <li class="mb-3">
+                    <label for="name">添加分类名：</label>
+                    <input type="text" name="name" class="form-control" />
+                </li>
+                <br>
+                
+                <li>
+                    <button type="submit" class="btn btn-primary btn-block">添加</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
 
+</div>
+
+ </div>
+    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+    
 <!--！！！！！！！！！！！！！！！！！！！！！！！！！！！模板结束！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
             </div>
             <!-- 主要内容结束 -->

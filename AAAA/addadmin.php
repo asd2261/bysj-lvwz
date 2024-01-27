@@ -1,11 +1,5 @@
+<?php require_once('yz.php'); ?>
 
-<?php
-include("conn.php");
-
-$sql="select*from class";
-$result=mysqli_query($conn,$sql);
-
-?>
 
 <html lang="zh">
 
@@ -45,7 +39,7 @@ $result=mysqli_query($conn,$sql);
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- 侧边栏 - 品牌标识 -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="right.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -71,7 +65,7 @@ $result=mysqli_query($conn,$sql);
             </div>
 
             <!-- 导航项 - 页面折叠菜单 -->
-       <li class="nav-item">
+          <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNew"
         aria-expanded="true" aria-controls="collapseNew">
         <i class="fas fa-fw fa-star"></i>
@@ -250,13 +244,13 @@ $result=mysqli_query($conn,$sql);
     <!-- 下拉框 - 用户信息 -->
     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
         aria-labelledby="userDropdown">
-        <a class="dropdown-item" href="#">
+        <a class="dropdown-item" href="grzl.php?id=<?=$_SESSION["username"]?>">
             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
             个人资料
         </a>
         <a class="dropdown-item" href="#">
             <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-            设置
+            修改密码
         </a>
         <a class="dropdown-item" href="#">
             <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -277,8 +271,68 @@ $result=mysqli_query($conn,$sql);
 </nav>
 <!-- 顶部栏结束 -->
 <!--！！！！！！！！！！！！！！！！！！！！！！！！！！！模板开始！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
+<?php
+include("conn.php");
 
+$sql="select*from class";
+$result=mysqli_query($conn,$sql);
 
+?>
+                
+                
+     <div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">添加管理员</h6>
+        </div>
+        <div class="card-body">
+            <form method="post" action="adminck.php" >
+                <ul class="list-unstyled">
+                    <li class="mb-3">
+                        <label for="username">用户名：</label>
+                        <input type="text" name="username" class="form-control" value="<?php echo $rows["username"];?>"/>
+                    </li>
+                    <li class="mb-3">
+                        <label for="password">密码：</label>
+                        <input type="password" name="password" id="password" class="form-control" value="<?php echo $rows["password"];?>"/>
+                    </li>
+                   <li class="mb-3">
+                        <label>是否已经授权：</label>
+                        <div class="btn-group" role="group" aria-label="Authorization">
+                            <input type="radio" name="pd" value="1" class="btn-check" id="pd1" <?php echo ($rows["pd"] == 1) ? 'checked' : ''; ?>>
+                            <label class="btn btn-outline-danger <?php echo ($rows["pd"] == 1) ? 'active' : ''; ?>" for="pd1">未授权</label>
+
+                            <input type="radio" name="pd" value="2" class="btn-check" id="pd2" <?php echo ($rows["pd"] == 2) ? 'checked' : ''; ?>>
+                            <label class="btn btn-outline-success <?php echo ($rows["pd"] == 2) ? 'active' : ''; ?>" for="pd2">已授权</label>
+                        </div>
+                    </li>
+                   <li class="mb-3">
+    <label for="text">当前时间：</label>
+    <input type="text" name="date" id="date" class="form-control" value="<?php echo date('Y-m-d H:i:s'); ?>" readonly />
+</li>
+
+                    <li style="margin-top: 10px;">
+                        <input type="submit" value="添加管理" class="btn btn-primary btn-block" onclick="return validateForm()" />
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function validateForm() {
+    var password = document.getElementById("password").value;
+
+    if (password.length < 6) {
+        alert("密码长度不能少于6位");
+        return false;
+    }
+
+    return true;
+}
+</script>
+      
 
 <!--！！！！！！！！！！！！！！！！！！！！！！！！！！！模板结束！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
             </div>

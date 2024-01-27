@@ -38,7 +38,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- 侧边栏 - 品牌标识 -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="right.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -64,6 +64,23 @@
             </div>
 
             <!-- 导航项 - 页面折叠菜单 -->
+          <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNew"
+        aria-expanded="true" aria-controls="collapseNew">
+        <i class="fas fa-fw fa-star"></i>
+        <span>用户权限管理</span>
+    </a>
+    <div id="collapseNew" class="collapse" aria-labelledby="headingNew" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">添加․查看․修改管理</h6>
+            <a class="collapse-item" href="addadmin.php">添加管理用户</a>
+            <a class="collapse-item" href="adminlook.php">管理用户列表</a>
+        </div>
+    </div>
+</li>
+
+            
+            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -72,9 +89,9 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">自定义组件:</h6>
-                        <a class="collapse-item" href="buttons.html">按钮</a>
-                        <a class="collapse-item" href="classlook.php">导航栏列表</a>
+                        <h6 class="collapse-header">添加․查看․修改导航</h6>
+                        <a class="collapse-item" href="addclass.php">添加导航分类</a>
+                        <a class="collapse-item" href="classlook.php">导航分类列表</a>
                     </div>
                 </div>
             </li>
@@ -162,7 +179,7 @@
             <div id="content">
 
                 <!-- 顶部栏 -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-1 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- 侧边栏切换按钮（顶部栏） -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -215,10 +232,6 @@
                       <!-- Nav Item - Messages -->
                       <div class="topbar-divider d-none d-sm-block"></div>
 
-                    
-                    
-   
-                    
                         <!-- 导航项 - 用户信息 -->
 <li class="nav-item dropdown no-arrow " style="list-style-type:none;">
     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -230,13 +243,13 @@
     <!-- 下拉框 - 用户信息 -->
     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
         aria-labelledby="userDropdown">
-        <a class="dropdown-item" href="#">
+        <a class="dropdown-item" href="grzl.php?id=<?=$_SESSION["username"]?>">
             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
             个人资料
         </a>
         <a class="dropdown-item" href="#">
             <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-            设置
+            修改密码
         </a>
         <a class="dropdown-item" href="#">
             <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -253,81 +266,63 @@
 
                    
 
+
                <!-- 顶部栏 -->
 </nav>
 <!-- 顶部栏结束 -->
-
-
-                
-                
-                            <?php
+<?php
 include("conn.php");
 
-$sql="select*from class";
-$result=mysqli_query($conn,$sql);
+$sql = "SELECT * FROM class";
+$result = mysqli_query($conn, $sql);
 
-?>     
-                
-                
-         <div class="container-fluid">
+// 关闭数据库连接
+mysqli_close($conn);
+?>
 
-        <!-- 数据表格示例 -->
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <!-- 数据表格标题 -->
-                <h6 class="m-0 font-weight-bold text-primary">分类列表</h6>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <!-- 数据表格 -->
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  
-
-                            <thead>
-                         <tr>
-                       <th>分类编号id</th>
-                      <th>分类名称name</th>
-                     <th>分类级别type</th>
-                     <th>父类编号uid</th>
-                     <th>操作</th>
-                    </tr>
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">分类列表</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>分类编号id</th>
+                            <th>分类名称name</th>
+                            <th>分类级别type</th>
+                            <th>父类编号uid</th>
+                            <th>操作</th>
+                        </tr>
                     </thead>
-    <?php
-	  while ($rows=mysqli_fetch_array($result)){
-          $id=$rows["id"];
-	  ?>
-<tr>
-<td><?php echo $rows["id"]; ?></td>
-<td><?php echo $rows["classname"]; ?></td>
-<td><?php echo $rows["typeid"]; ?></td>
-<td><?php echo $rows["uid"]; ?></td>
-<td><a href="modifyclass.php?id=<?php echo $id?>">编辑</a>&nbsp;&nbsp;<a href="classdelete.php?id=<?php echo $id?>">删除</a></td>
-</tr>
-<?php
-	  }
-	  ?>
-</table>
-                                      
-                                        
-                                   
-                </div>
+                    <tbody>
+                        <?php
+                        while ($rows = mysqli_fetch_array($result)) {
+                            $id = $rows["id"];
+                        ?>
+                            <tr>
+                                <td><?php echo $rows["id"]; ?></td>
+                                <td><?php echo $rows["classname"]; ?></td>
+                                <td><?php echo $rows["typeid"]; ?></td>
+                                <td><?php echo $rows["uid"]; ?></td>
+                                <td>
+                                    <a href="modifyclass.php?id=<?php echo $id ?>">编辑</a>
+                                    &nbsp;&nbsp;
+                                    <a href="classdelete.php?id=<?php echo $id ?>">删除</a>
+                                </td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </div>       
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-    
+    </div>
+</div>
 
-            </div>
             <!-- 主要内容结束 -->
 
             <!-- 页脚 -->

@@ -38,7 +38,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- 侧边栏 - 品牌标识 -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="right.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -64,6 +64,25 @@
             </div>
 
             <!-- 导航项 - 页面折叠菜单 -->
+       
+            <!-- 新导航项 - 示例 -->
+<li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNew"
+        aria-expanded="true" aria-controls="collapseNew">
+        <i class="fas fa-fw fa-star"></i>
+        <span>用户权限管理</span>
+    </a>
+    <div id="collapseNew" class="collapse" aria-labelledby="headingNew" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">添加․查看․修改管理</h6>
+            <a class="collapse-item" href="addadmin.php">添加管理用户</a>
+            <a class="collapse-item" href="adminlook.php">管理用户列表</a>
+        </div>
+    </div>
+</li>
+
+            
+            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -72,9 +91,9 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">自定义组件:</h6>
-                        <a class="collapse-item" href="buttons.html">按钮</a>
-                        <a class="collapse-item" href="classlook.php">导航栏列表</a>
+                        <h6 class="collapse-header">添加․查看․修改导航</h6>
+                        <a class="collapse-item" href="addclass.php">添加导航分类</a>
+                        <a class="collapse-item" href="classlook.php">导航分类列表</a>
                     </div>
                 </div>
             </li>
@@ -226,13 +245,13 @@
     <!-- 下拉框 - 用户信息 -->
     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
         aria-labelledby="userDropdown">
-        <a class="dropdown-item" href="#">
+        <a class="dropdown-item" href="grzl.php?id=<?=$_SESSION["username"]?>">
             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
             个人资料
         </a>
         <a class="dropdown-item" href="#">
             <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-            设置
+            修改密码
         </a>
         <a class="dropdown-item" href="#">
             <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -266,7 +285,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                收入（月度）</div>
+                                用户数量</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
                         </div>
                         <div class="col-auto">
@@ -284,7 +303,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                收入（年度）</div>
+                                导航栏）</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
                         </div>
                         <div class="col-auto">
@@ -301,7 +320,7 @@
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">任务</div>
+                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">图片数量</div>
                     <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                             <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">90%</div>
@@ -329,7 +348,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                待处理请求</div>
+                                                新闻数量</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
                                         </div>
                                         <div class="col-auto">
@@ -355,7 +374,7 @@
             
             <tr>
         <td height="102" valign="top" colspan="2">
-            <table width="95%" height="153" border="0" align="center" cellpadding="2" cellspacing="1">
+            <table width="95%" height="280" border="0" align="center" cellpadding="2" cellspacing="1">
 					<tr>
                       	<td height="23" width="48%">用户名：<?=$_SESSION["username"]?></td>
                       	<td width="52%">ip：<?=$_SERVER['REMOTE_ADDR']?></td>
@@ -383,6 +402,9 @@
             
         </div>
     </div>
+    
+
+
 </div>
 
                 
