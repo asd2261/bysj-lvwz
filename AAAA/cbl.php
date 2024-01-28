@@ -1,5 +1,7 @@
-<!doctype html>
-<html>
+<?php require_once('yz.php'); ?>
+<!DOCTYPE html>
+<html lang="zh">
+
 <head>
 
     <!-- 设置字符集 -->
@@ -27,12 +29,11 @@
 
 </head>
 
-<body>
-      <!-- 侧边栏 -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<body >
+  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- 侧边栏 - 品牌标识 -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="right.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -44,7 +45,7 @@
 
             <!-- 导航项 - 仪表板 -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>仪表板</span></a>
             </li>
@@ -58,6 +59,25 @@
             </div>
 
             <!-- 导航项 - 页面折叠菜单 -->
+       
+            <!-- 新导航项 - 示例 -->
+<li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNew"
+        aria-expanded="true" aria-controls="collapseNew">
+        <i class="fas fa-fw fa-star"></i>
+        <span>用户权限管理</span>
+    </a>
+    <div id="collapseNew" class="collapse" aria-labelledby="headingNew" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">添加․查看․修改管理</h6>
+            <a class="collapse-item" href="addadmin.php">添加管理用户</a>
+            <a class="collapse-item" href="adminlook.php">管理用户列表</a>
+        </div>
+    </div>
+</li>
+
+            
+            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -66,13 +86,31 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">自定义组件:</h6>
-                        <a class="collapse-item" href="buttons.html">按钮</a>
-                        <a class="collapse-item" href="classlook.php">导航栏列表</a>
+                        <h6 class="collapse-header">添加․查看․修改导航</h6>
+                        <a class="collapse-item" href="addclass.php">添加导航分类</a>
+                        <a class="collapse-item" href="classlook.php">导航分类列表</a>
                     </div>
                 </div>
             </li>
 
+
+<li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+        aria-expanded="true" aria-controls="collapseThree">
+        <i class="fas fa-fw fa-list-alt"></i>
+        <span>新闻发布管理</span>
+    </a>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">添加․查看․修改新闻</h6>
+            <a class="collapse-item" href="addnews.php">添加新闻内容</a>
+            <a class="collapse-item" href="newslook.php">新闻内容列表</a>
+        </div>
+    </div>
+</li>
+
+      
+      
             <!-- 导航项 - 实用工具折叠菜单 -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
@@ -146,6 +184,7 @@
            
 
         </ul>
-        <!-- 侧边栏结束 -->
+
 </body>
+
 </html>

@@ -20,7 +20,7 @@ if ($username != NULL and $password != NULL) {
             echo "<script>alert('用户名已存在，请选择其他用户名！');location.href='zc.php';</script>";
         } else {
             // 用户名不存在，将用户信息插入数据库
-            $insert_user_query = "INSERT INTO admin (username, password) VALUES ('$username', '$password')";
+            $insert_user_query = "INSERT INTO admin (username, password,pd,rq) VALUES ('$username', '$password','999', CURRENT_TIMESTAMP)";
             mysqli_query($conn, $insert_user_query);
             
             // 注册成功，跳转到登录界面

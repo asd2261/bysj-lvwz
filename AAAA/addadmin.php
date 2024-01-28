@@ -1,6 +1,5 @@
 <?php require_once('yz.php'); ?>
 
-
 <html lang="zh">
 
 <head>
@@ -27,149 +26,21 @@
 
     <!-- 引入自定义样式 -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+<style>
+    .btn-group .btn {
+        margin-right: 10px; /* 调整按钮之间的右侧间距 */
+    }
 
+</style>
 </head>
 
 <body id="page-top">
 
-    <!-- 页面包装器 -->
+      <!-- 页面包装器 -->
     <div id="wrapper">
 
    <!-- 侧边栏 -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- 侧边栏 - 品牌标识 -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">风景如画后台</div>
-            </a>
-
-            <!-- 分隔线 -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- 导航项 - 仪表板 -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>仪表板</span></a>
-            </li>
-
-            <!-- 分隔线 -->
-            <hr class="sidebar-divider">
-
-            <!-- 分类标题 - 界面 -->
-            <div class="sidebar-heading">
-                界面
-            </div>
-
-            <!-- 导航项 - 页面折叠菜单 -->
-          <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNew"
-        aria-expanded="true" aria-controls="collapseNew">
-        <i class="fas fa-fw fa-star"></i>
-        <span>用户权限管理</span>
-    </a>
-    <div id="collapseNew" class="collapse" aria-labelledby="headingNew" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">添加․查看․修改管理</h6>
-            <a class="collapse-item" href="addadmin.php">添加管理用户</a>
-            <a class="collapse-item" href="adminlook.php">管理用户列表</a>
-        </div>
-    </div>
-</li>
-
-            
-            
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>导航栏分类管理</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">添加․查看․修改导航</h6>
-                        <a class="collapse-item" href="addclass.php">添加导航分类</a>
-                        <a class="collapse-item" href="classlook.php">导航分类列表</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- 导航项 - 实用工具折叠菜单 -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>实用工具</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">自定义实用工具:</h6>
-                        <a class="collapse-item" href="utilities-color.html">颜色</a>
-                        <a class="collapse-item" href="utilities-border.html">边框</a>
-                        <a class="collapse-item" href="utilities-animation.html">动画</a>
-                        <a class="collapse-item" href="utilities-other.html">其他</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- 分隔线 -->
-            <hr class="sidebar-divider">
-
-            <!-- 分类标题 - 附加组件 -->
-            <div class="sidebar-heading">
-                附加组件
-            </div>
-
-            <!-- 导航项 - 页面折叠菜单 -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>页面</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">登录页面:</h6>
-                        <a class="collapse-item" href="login.html">登录</a>
-                        <a class="collapse-item" href="register.html">注册</a>
-                        <a class="collapse-item" href="forgot-password.html">忘记密码</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">其他页面:</h6>
-                        <a class="collapse-item" href="404.html">404 页面</a>
-                        <a class="collapse-item" href="blank.html">空白页面</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- 导航项 - 图表 -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>图表</span></a>
-            </li>
-
-            <!-- 导航项 - 表格 -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>表格</span></a>
-            </li>
-
-            <!-- 分隔线 -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- 侧边栏切换按钮 -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-           
-
-        </ul>
+       <?php include('cbl.php'); ?>
         <!-- 侧边栏结束 -->
 
 
@@ -180,103 +51,16 @@
             <div id="content">
 
                 <!-- 顶部栏 -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- 侧边栏切换按钮（顶部栏） -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- 顶部栏搜索 -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="搜索..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-<!-- 顶部导航栏导航 -->
-<ul class="navbar-nav ml-auto">
-
-    <!-- 导航项 - 搜索下拉框（仅在XS屏幕可见） -->
-    <li class="nav-item dropdown no-arrow d-sm-none">
-        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-search fa-fw"></i>
-        </a>
-        <!-- 下拉框 - 搜索 -->
-        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-            aria-labelledby="searchDropdown">
-            <form class="form-inline mr-auto w-100 navbar-search">
-                <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small"
-                        placeholder="搜索..." aria-label="Search"
-                        aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">
-                            <i class="fas fa-search fa-sm"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </li>
-</ul>
-<!-- 顶部导航栏结束 -->
-
-                      <!-- 导航项 - 提示 -->
-                      <!-- Nav Item - Messages -->
-                      <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- 导航项 - 用户信息 -->
-<li class="nav-item dropdown no-arrow " style="list-style-type:none;">
-    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="mr-2 d-none d-lg-inline text-gray-600 small">当前用户：<?=$_SESSION["username"]?></span>
-        <img class="img-profile rounded-circle"
-            src="img/undraw_profile.svg">
-    </a>
-    <!-- 下拉框 - 用户信息 -->
-    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-        aria-labelledby="userDropdown">
-        <a class="dropdown-item" href="grzl.php?id=<?=$_SESSION["username"]?>">
-            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-            个人资料
-        </a>
-        <a class="dropdown-item" href="#">
-            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-            修改密码
-        </a>
-        <a class="dropdown-item" href="#">
-            <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-            活动日志
-        </a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-            退出
-        </a>
-    </div>
-</li>
-
-
-                   
-
-               <!-- 顶部栏 -->
-</nav>
+                <?php include('dbl.php'); ?>
 <!-- 顶部栏结束 -->
 <!--！！！！！！！！！！！！！！！！！！！！！！！！！！！模板开始！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
+
 <?php
 include("conn.php");
 
-$sql="select*from class";
+/*$sql="select*from class";
 $result=mysqli_query($conn,$sql);
-
+*/
 ?>
                 
                 
@@ -290,22 +74,43 @@ $result=mysqli_query($conn,$sql);
                 <ul class="list-unstyled">
                     <li class="mb-3">
                         <label for="username">用户名：</label>
-                        <input type="text" name="username" class="form-control" value="<?php echo $rows["username"];?>"/>
+                        <input type="text" name="username" class="form-control" value=""/>
                     </li>
                     <li class="mb-3">
                         <label for="password">密码：</label>
-                        <input type="password" name="password" id="password" class="form-control" value="<?php echo $rows["password"];?>"/>
+                        <input type="password" name="password" id="password" class="form-control" value=""/>
                     </li>
-                   <li class="mb-3">
-                        <label>是否已经授权：</label>
-                        <div class="btn-group" role="group" aria-label="Authorization">
-                            <input type="radio" name="pd" value="1" class="btn-check" id="pd1" <?php echo ($rows["pd"] == 1) ? 'checked' : ''; ?>>
-                            <label class="btn btn-outline-danger <?php echo ($rows["pd"] == 1) ? 'active' : ''; ?>" for="pd1">未授权</label>
+                          <li class="mb-3">
+    <label>是否已经授权：</label>
 
-                            <input type="radio" name="pd" value="2" class="btn-check" id="pd2" <?php echo ($rows["pd"] == 2) ? 'checked' : ''; ?>>
-                            <label class="btn btn-outline-success <?php echo ($rows["pd"] == 2) ? 'active' : ''; ?>" for="pd2">已授权</label>
-                        </div>
-                    </li>
+    <div class="btn-group" role="group" aria-label="Authorization">
+        <button type="button" class="btn btn-outline-danger rounded" data-value="1">未授权</button>
+        <button type="button" class="btn btn-outline-success rounded" data-value="2">已授权</button>
+        <button type="button" class="btn btn-outline-warning rounded" data-value="3">其他状态</button>
+        <input type="hidden" name="pd" id="pdHidden" value="">
+    </div>
+
+    <script>
+        // JavaScript 代码
+        document.querySelectorAll('.btn-group .btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                // 移除所有按钮的 active 类
+                document.querySelectorAll('.btn-group .btn').forEach(function(btn) {
+                    btn.classList.remove('active');
+                });
+
+                // 为当前按钮添加 active 类
+                this.classList.add('active');
+
+                // 获取按钮的 data-value 属性值
+                var value = this.getAttribute('data-value');
+                // 设置隐藏域的值
+                document.getElementById('pdHidden').value = value;
+            });
+        });
+    </script>
+</li>
+
                    <li class="mb-3">
     <label for="text">当前时间：</label>
     <input type="text" name="date" id="date" class="form-control" value="<?php echo date('Y-m-d H:i:s'); ?>" readonly />
@@ -332,20 +137,15 @@ function validateForm() {
     return true;
 }
 </script>
-      
+       
+                
 
 <!--！！！！！！！！！！！！！！！！！！！！！！！！！！！模板结束！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
             </div>
             <!-- 主要内容结束 -->
 
-            <!-- 页脚 -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 风景如画2024</span>
-                    </div>
-                </div>
-            </footer>
+          <!-- 页脚 -->
+            <?php include('footer.php'); ?>
             <!-- 页脚结束 -->
 
         </div>
@@ -361,68 +161,10 @@ function validateForm() {
 
 
 <!-- 登出模态框 -->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">确定要离开吗？</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">如果您准备结束当前会话，请选择 "退出"。</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
-              <a class="btn btn-primary" href="exit.php?action=exit" >退出</a>
-            </div>
-        </div>
-    </div>
-</div>
+ <?php include('dck.php'); ?>
 
-
-<!-- Bootstrap核心JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- 核心插件JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- 所有页面的自定义脚本 -->
-<script src="js/sb-admin-2.min.js"></script>
-
-<!-- 页面级别插件 -->
-<script src="vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-<!-- 页面级别自定义脚本 -->
-<script src="js/demo/datatables-demo.js"></script>
-<script>
-$.fn.dataTable.defaults.oLanguage = {
-    "sProcessing": "处理中...",
-    "sLengthMenu": "显示 _MENU_ 项结果",
-    "sZeroRecords": "没有匹配结果",
-    "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
-    "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
-    "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
-    "sInfoPostFix": "",
-    "sSearch": "搜索：",
-    "sUrl": "",
-    "sEmptyTable": "表中数据为空",
-    "sLoadingRecords": "载入中...",
-    "sInfoThousands": ",",
-    "oPaginate": {
-        "sFirst": "首页",
-        "sPrevious": "上页",
-        "sNext": "下页",
-        "sLast": "末页"
-    },
-    "oAria": {
-        "sSortAscending": ": 以升序排列此列",
-        "sSortDescending": ": 以降序排列此列"
-    }
-};
-    </script>
+<!-- JavaScript-->
+ <?php include('footer_scripts.php'); ?>
 
 </body>
 

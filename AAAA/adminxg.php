@@ -30,7 +30,7 @@ if (mysqli_num_rows($resultCheck) > 0) {
 }
 
 // 修改操作
-$query = "UPDATE admin SET username='{$username}', password='{$password}', pd='{$pd}' WHERE id={$id}";
+$query = "UPDATE admin SET username='{$username}', password='{$password}', pd='{$pd}' , rq=CURRENT_TIMESTAMP WHERE id={$id}";
 $result = mysqli_query($conn, $query);
 
 if ($result) {
