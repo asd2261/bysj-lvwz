@@ -110,9 +110,9 @@ $result=mysqli_query($conn,$sql);
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="modifyadmin.php?id=<?php echo $id ?>">编辑</a>
+                                    <a href="modifyadmin.php?id=<?php echo $id ?>"  class="btn btn-warning btn-sm">编辑</a>
                                     &nbsp;&nbsp;
-                                    <a href="admindelete.php?id=<?php echo $id ?>">删除</a>
+                                    <a href="admindelete.php?id=<?php echo $id ?>" class="btn btn-danger btn-sm">删除</a>
                                 </td>
                             </tr>
                         <?php

@@ -8,6 +8,7 @@ include("conn.php");
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/newslook.css" />
 <title>新闻列表</title>
+
 </head>
 
 

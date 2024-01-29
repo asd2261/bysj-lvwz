@@ -1,4 +1,3 @@
-
 <?php require_once('yz.php'); ?>
 
 <html lang="zh">

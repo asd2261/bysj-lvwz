@@ -86,9 +86,9 @@ mysqli_close($conn);
                                 <td><?php echo $rows["typeid"]; ?></td>
                                 <td><?php echo $rows["uid"]; ?></td>
                                 <td>
-                                    <a href="modifyclass.php?id=<?php echo $id ?>">编辑</a>
+                                    <a href="modifyclass.php?id=<?php echo $id ?>"  class="btn btn-warning btn-sm">编辑</a>
                                     &nbsp;&nbsp;
-                                    <a href="classdelete.php?id=<?php echo $id ?>">删除</a>
+                                    <a href="classdelete.php?id=<?php echo $id ?>" class="btn btn-danger btn-sm">删除</a>
                                 </td>
                             </tr>
                         <?php

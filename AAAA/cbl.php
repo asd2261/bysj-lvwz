@@ -109,9 +109,24 @@
     </div>
 </li>
 
+ <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustom"
+        aria-expanded="true" aria-controls="collapseCustom">
+        <i class="fas fa-fw fa-cogs"></i>
+        <span>图片发布管理</span>
+    </a>
+    <div id="collapseCustom" class="collapse" aria-labelledby="headingCustom" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">操作․查看․修改图片</h6>
+            <a class="collapse-item" href="addimages.php">添加图片内容</a>
+            <a class="collapse-item" href="imglook.php">图片内容列表</a>
+        </div>
+    </div>
+</li>
+
+
       
-      
-            <!-- 导航项 - 实用工具折叠菜单 -->
+        <?php /*?>    <!-- 导航项 - 实用工具折叠菜单 -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
@@ -173,6 +188,8 @@
                     <span>表格</span></a>
             </li>
 
+      <?php */?>
+      
             <!-- 分隔线 -->
             <hr class="sidebar-divider d-none d-md-block">
 

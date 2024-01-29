@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>找回密码</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/reset/reset.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="static/js/common/code.js"></script>
+	<style>
+		body{
+			background-image: url("static/image/reset/reset.jpg");
+			background-size:cover;
+			background-repeat: no-repeat;  
+		}
+		.panel-body{
+			padding-left:15%;
+			 border:5px solid #00a4ff;
+			}
+		#test{
+			width:340px;
+			height:210px;
+
+		}
+		.container{
+			position:relative;
+			top:25%;
+           width:500px;
+           height:211px;
+          
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="panel panel-info">
+			<div class="panel-body">
+			<div id="test">
+				<div class="lab"><label for="">手机号</label><input type="text"></div>
+				<br>
+				<div class="lab2"><label for="">验证码</label><input id="pd" type="text"></div><a id="btn"  onclick="sendMessage()">发送验证码</a>
+				<br>
+				<br>
+				<br>
+				<div class="lab"><label for="">新密码</label><input type="password"></div>
+				<br>
+				<div><input type="button" value="提交" class="btn btn-primary"></div>
+			</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

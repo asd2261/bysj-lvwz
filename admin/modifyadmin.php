@@ -42,7 +42,8 @@ $id=$_GET["id"];
 <form method="post" action="adminxg.php?id=<?php echo $id?>">
 <ul>
 <li>用户名：<input type="text" name="username"value="<?php echo $rows["username"];?>"/></li>
-<li>密码：<input type="password" name="password" id="password" value="<?php echo $rows["password"];?>"/></li>
+<li>密码：
+  <input type="password" name="password" id="password" value="<?php echo $rows["password"];?>"/></li>
 <li>是否授权：
   <label>
     <input type="radio" name="pd" value="1" <?php echo ($rows["pd"] == 1) ? 'checked' : ''; ?>> 不授权

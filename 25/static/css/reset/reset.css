@@ -1,0 +1,46 @@
+input{
+			border:0;
+			outline:none;
+		}
+		
+		.lab{
+			width:320px;
+			height:37px;
+			border:1px solid #ccc;
+			}
+		label{
+			padding-left:10px;padding-right:10px;
+			line-height:36px;
+		}	
+		#btn{
+           width:93px;
+			height:37px;
+			font-size:15px;
+			color:#fff;
+			cursor:pointer;
+			background:#337ab7;
+			font-family:"Microsoft YaHei";
+			text-decoration: none;
+			display: block;
+			float:left;
+			text-align: center;
+			line-height: 37px;
+			margin-left:6px;
+			
+		}
+		#btn:hover{
+			background:#3d719e;
+		}
+		.lab2{
+			width:220px;
+			height:37px;
+			border:1px solid #ccc;
+			float:left;
+		}
+       #pd{
+       	width:120px;
+       }
+       .btn{
+       	width:320px;
+			height:36px;
+       }

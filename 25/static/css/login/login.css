@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.panel-body{
+	border:5px solid #00a4ff;
+}
+#cb{
+	cursor: pointer;
+}
+.glyphicon{
+	font-size:22px;
+	position: relative;
+	top:4px;
+	color:#0e6b88;
+}
+.container{
+	width: 400px;
+	position:relative;
+	top:25%;
+}
+.text{
+	width:234px;
+	height:35px;
+	border: 0;
+	outline: none;
+}	
+.lab{
+	width:310px;
+	height:37px;
+	border:1px solid #ccc;
+	margin-bottom: 23px;
+	border-radius: 2px;
+}
+#phone{
+	width:210px;
+	height:37px;
+	border:1px solid #ccc;
+	margin-bottom: 23px;
+	border-radius: 2px;
+	float: left;
+}
+#send{
+	width:134px;
+	height:35px;
+	border: 0;
+	outline: none;
+}
+
+#login{
+	width:310px;
+	height:36px;
+}
+#forgetPass{
+	margin-left: 250px;
+}
+#btn{
+	width:93px;
+	height:37px;
+	font-size:15px;
+	color:#fff;
+	cursor:pointer;
+	background:#337ab7;
+	font-family:"Microsoft YaHei";
+	text-decoration: none;
+	display: block;
+	float:left;
+	text-align: center;
+	line-height: 37px;
+	margin-left:6px;
+}
+#btn:hover{
+	background:#3d719e;
+}
+#open{
+	text-decoration:none;
+	color:#000;
+	cursor:pointer;
+}
+i{padding-left:10px;padding-right:10px;}

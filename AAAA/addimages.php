@@ -26,7 +26,9 @@
 
     <!-- 引入自定义样式 -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+ <!-- 引入富文本 -->
+<script charset="utf-8" src="kindedit/kindeditor.js"></script>
+<script> KE.show({id : 'editor_id'});</script>
 </head>
 
 <body id="page-top">
@@ -49,62 +51,100 @@
                 <?php include('dbl.php'); ?>
 <!-- 顶部栏结束 -->
 <!--！！！！！！！！！！！！！！！！！！！！！！！！！！！模板开始！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
-<?php
-                include("conn.php");
 
-$sql = "SELECT * FROM news";
-$result = mysqli_query($conn, $sql);
-
-                ?>
-<div class="container-fluid">
+    <div class="container-fluid">
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">信息列表</h6>
+            <h6 class="m-0 font-weight-bold text-primary">添加视觉旅图</h6>
         </div>
         <div class="card-body">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>编号</th>
-                        <th>新闻分类</th>
-                        <th>新闻标题</th>
-                        <th>新闻来源</th>
-                        <th>发布时间</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                 <tbody>
+            <form method="post" action="checkimages.php" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="title">效果图标题：</label>
+                    <input type="text" class="form-control" id="title" name="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hx">美景所在地区：</label>
+                    <select class="form-control" id="hx" name="hx" required>
                         <?php
+                        $sql = "select id,classname from class where uid=13";
+                        $result = mysqli_query($conn, $sql);
                         while ($rows = mysqli_fetch_array($result)) {
-                          
-                             $uid=$rows['uid'];
-	$sql1="select  classname from class where id=$uid";
-		$result1=mysqli_query($conn,$sql1);
-		$rows1=mysqli_fetch_array($result1);
-                        ?>
-                            <tr>
-                                <td><?php echo $rows["id"]; ?></td>
-                               <td><?php echo $rows1["classname"]?></td>
-	<td><?php echo $rows["title"]?></td>
-	<td><?php echo $rows["birth"]?></td>
-	<td><?php echo $rows["date"]?></td>
-<td><a href="modifynews.php?id=<?php echo $rows['id'] ?>"  class="btn btn-warning btn-sm">编辑</a>&nbsp;&nbsp;<a href="newsdelete.php?id=<?php echo $rows['id'] ?>"class="btn btn-danger btn-sm">删除</a></td>
-                                </td>
-                            </tr>
+                            ?>
+                            <option value="<?php echo $rows["id"] ?>"><?php echo $rows["classname"]; ?></option>
                         <?php
                         }
                         ?>
-                    </tbody>
-            </table>
+                    </select>
+                </div>
 
+                <div class="form-group">
+                    <label for="fg">推荐出行方式：</label>
+                    <select class="form-control" id="fg" name="fg" required>
+                        <?php
+                        $sql = "select id,classname from class where uid=11";
+                        $result = mysqli_query($conn, $sql);
+                        while ($rows = mysqli_fetch_array($result)) {
+                            ?>
+                            <option value="<?php echo $rows["id"] ?>"><?php echo $rows["classname"]; ?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="kj">推荐出行季节：</label>
+                    <select class="form-control" id="kj" name="kj" required>
+                        <?php
+                        $sql = "select id,classname from class where uid=12";
+                        $result = mysqli_query($conn, $sql);
+                        while ($rows = mysqli_fetch_array($result)) {
+                            ?>
+                            <option value="<?php echo $rows["id"] ?>"><?php echo $rows["classname"]; ?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="jg">大概预算：</label>
+                    <input type="text" class="form-control" id="jg" name="jg" required>
+                    <small class="form-text text-muted"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="mj">预计时间：</label>
+                    <input type="text" class="form-control" id="mj" name="mj" required>
+                    <small class="form-text text-muted"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="img">美景图：</label>
+                    <input type="file" class="form-control-file" id="img" name="img" required>
+                    <small class="form-text text-muted">（图片大小不大于2000*2000）</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="rq">发布日期：</label>
+                    <input type="text" class="form-control" id="rq" name="rq" value="<?php echo date('Y-m-d') ?>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sjsm">景点说明：</label>
+                    <textarea class="form-control" id="editor_id" name="sjsm">请上传同组其他效果图！</textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="提交" class="btn btn-primary">
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
-                
-                
-                
-                
 
 <!--！！！！！！！！！！！！！！！！！！！！！！！！！！！模板结束！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
             </div>

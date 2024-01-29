@@ -49,59 +49,76 @@
                 <?php include('dbl.php'); ?>
 <!-- 顶部栏结束 -->
 <!--！！！！！！！！！！！！！！！！！！！！！！！！！！！模板开始！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
-<?php
-                include("conn.php");
 
-$sql = "SELECT * FROM news";
-$result = mysqli_query($conn, $sql);
 
-                ?>
-<div class="container-fluid">
+ <div class="container-fluid">
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">信息列表</h6>
         </div>
         <div class="card-body">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>户型(地区)</th>
+                    <th>风格</th>
+                    <th>空间(季节)</th>
+                    <th>标题</th>
+                    <th>图片</th>
+                    <th>面积(时间)</th>
+                    <th>价格</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $sql3 = "select * from img";
+                $result3 = mysqli_query($conn, $sql3);
+                while ($rows3 = mysqli_fetch_array($result3)) {
+                ?>
                     <tr>
-                        <th>编号</th>
-                        <th>新闻分类</th>
-                        <th>新闻标题</th>
-                        <th>新闻来源</th>
-                        <th>发布时间</th>
-                        <th>操作</th>
+                        <td><?php echo $rows3["id"] ?></td>
+                        <?php
+                        $uid = $rows3['hxid'];
+                        $sql1 = "select  classname from class where id=$uid";
+                        $result1 = mysqli_query($conn, $sql1);
+                        $rows1 = mysqli_fetch_array($result1);
+                        ?>
+                        <td><?php echo $rows1["classname"] ?></td>
+                        <?php
+                        $uid = $rows3['fgid'];
+                        $sql1 = "select  classname from class where id=$uid";
+                        $result1 = mysqli_query($conn, $sql1);
+                        $rows1 = mysqli_fetch_array($result1);
+                        ?>
+                        <td><?php echo $rows1["classname"] ?></td>
+                        <?php
+                        $uid = $rows3['kjid'];
+                        $sql1 = "select  classname from class where id=$uid";
+                        $result1 = mysqli_query($conn, $sql1);
+                        $rows1 = mysqli_fetch_array($result1);
+                        ?>
+                        <td><?php echo $rows1["classname"] ?></td>
+                        <td><?php echo $rows3["title"] ?></td>
+                        <td><img src="<?php echo $rows3['img']; ?>" width="50" height="50"></td>
+                        <td><?php echo $rows3["mj"] ?></td>
+                        <td><?php echo $rows3["jg"] ?></td>
+                        <td><?php echo $rows3["date"] ?></td>
+                        <td>
+                            <a href="modifyimg.php?id=<?php echo $rows3['id'] ?>" class="btn btn-warning btn-sm">编辑</a>
+                            <a href="imgdelete.php?id=<?php echo $rows3['id'] ?>" class="btn btn-danger btn-sm">删除</a>
+                        </td>
                     </tr>
-                </thead>
-                 <tbody>
-                        <?php
-                        while ($rows = mysqli_fetch_array($result)) {
-                          
-                             $uid=$rows['uid'];
-	$sql1="select  classname from class where id=$uid";
-		$result1=mysqli_query($conn,$sql1);
-		$rows1=mysqli_fetch_array($result1);
-                        ?>
-                            <tr>
-                                <td><?php echo $rows["id"]; ?></td>
-                               <td><?php echo $rows1["classname"]?></td>
-	<td><?php echo $rows["title"]?></td>
-	<td><?php echo $rows["birth"]?></td>
-	<td><?php echo $rows["date"]?></td>
-<td><a href="modifynews.php?id=<?php echo $rows['id'] ?>"  class="btn btn-warning btn-sm">编辑</a>&nbsp;&nbsp;<a href="newsdelete.php?id=<?php echo $rows['id'] ?>"class="btn btn-danger btn-sm">删除</a></td>
-                                </td>
-                            </tr>
-                        <?php
-                        }
-                        ?>
-                    </tbody>
-            </table>
-
-        </div>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
     </div>
 </div>
 
-                
                 
                 
                 
