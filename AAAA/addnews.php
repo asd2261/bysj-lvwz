@@ -1,10 +1,6 @@
-
 <?php require_once('yz.php'); ?>
-
 <html lang="zh">
-
 <head>
-
     <!-- 设置字符集 -->
     <meta charset="utf-8">
     <!-- 指定IE浏览器使用最新的渲染引擎 -->
@@ -15,40 +11,30 @@
     <meta name="description" content="">
     <!-- 作者信息 -->
     <meta name="author" content="">
-
     <!-- 页面标题 -->
     <title>风景如画后台管理系统</title>
-
     <!-- 为此模板添加自定义字体 -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
     <!-- 引入自定义样式 -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet"><br>
  <!-- 引入富文本 -->
 <script charset="utf-8" src="kindedit/kindeditor.js"></script>
 <script> KE.show({id : 'editor_id'});</script>
-  
+
 </head>
-
 <body id="page-top">
-
       <!-- 页面包装器 -->
     <div id="wrapper">
-
    <!-- 侧边栏 -->
        <?php include('cbl.php'); ?>
         <!-- 侧边栏结束 -->
-
-
         <!-- 内容包装器 -->
         <div id="content-wrapper" class="d-flex flex-column">
-
             <!-- 主要内容 -->
             <div id="content">
-
                 <!-- 顶部栏 -->
                 <?php include('dbl.php'); ?>
 <!-- 顶部栏结束 -->
@@ -56,7 +42,6 @@
 <?php
 include("conn.php");
 ?>
-
                 <div class="container-fluid">
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -103,8 +88,8 @@ include("conn.php");
 
                 <div class="form-group">
                     <label for="content">新闻内容：</label>
-            <textarea id="editor_id" name="content" class="form-control"><?php echo $rows["content"];?></textarea>
-                </div>
+                    <textarea id="editor_id" name="content" class="form-control" rows="10"></textarea>
+</div>
 
                 <div class="form-group">
                     <input type="submit" value="提交" class="btn btn-primary" />
@@ -113,34 +98,22 @@ include("conn.php");
         </div>
     </div>
 </div>
-
-                
-                
-                
-
 <!--！！！！！！！！！！！！！！！！！！！！！！！！！！！模板结束！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
             </div>
             <!-- 主要内容结束 -->
-
           <!-- 页脚 -->
             <?php include('footer.php'); ?>
             <!-- 页脚结束 -->
-
         </div>
         <!-- 内容包装结束 -->
-
     </div>
     <!-- 结束页包装r -->
-
   <!-- 滚动到顶部按钮 -->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
-
-
 <!-- 登出模态框 -->
  <?php include('dck.php'); ?>
-
 <!-- JavaScript-->
 <!-- Bootstrap核心JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
@@ -186,5 +159,4 @@ $.fn.dataTable.defaults.oLanguage = {
     </script>
 
 </body>
-
 </html>

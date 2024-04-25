@@ -32,7 +32,7 @@
                     $sql2 = "select content from news";
                     $result2 = mysqli_query($conn, $sql2);
                     $rows2 = mysqli_fetch_array($result2);
-                    echo mb_substr($rows2['content'], 0, 250, 'utf-8') . '...';
+                    echo mb_substr($rows2['content'], 0, 350, 'utf-8') . '...';
                     ?>
                     
                 </p>

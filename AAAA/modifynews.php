@@ -1,4 +1,3 @@
-
 <?php require_once('yz.php'); ?>
 
 <html lang="zh">
@@ -106,9 +105,9 @@
 
         <div class="form-group">
             <label for="content">新闻内容：</label>
-            <textarea id="editor_id" name="content" class="form-control"><?php echo $rows["content"];?></textarea>
-        </div>
-
+           
+        <textarea id="editor_id" name="content" class="form-control" rows="10"><?php echo $rows["content"];?></textarea>
+</div>
         <div class="form-group">
             <input type="submit" value="修改" class="btn btn-primary" />
         </div>

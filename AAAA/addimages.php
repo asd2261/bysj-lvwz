@@ -134,8 +134,9 @@
 
                 <div class="form-group">
                     <label for="sjsm">景点说明：</label>
-                    <textarea class="form-control" id="editor_id" name="sjsm">请上传同组其他效果图！</textarea>
-                </div>
+                    <textarea id="editor_id" name="content" class="form-control" rows="10"></textarea>
+</div>
+                
 
                 <div class="form-group">
                     <input type="submit" value="提交" class="btn btn-primary">

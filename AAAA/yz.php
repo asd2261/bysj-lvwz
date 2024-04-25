@@ -1,13 +1,11 @@
 <?php
 include("conn.php");
 session_start();
-
 if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
     echo "<script>alert('你还未登录！无权访问！');location.href='login.php';</script>";
 } else {
     // 获取当前用户的用户名
     $username = $_SESSION['username'];
-
     // 查询admin表中的pd字段
     $query = "SELECT pd FROM admin WHERE username = '$username'";
     $result = mysqli_query($conn, $query);

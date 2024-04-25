@@ -20,8 +20,8 @@
 </style>
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  	 <a href="#" class="navbar-brand" >
-  	 	  <img src="images/logo.png" width="30" height="30">
+  	 <a href="index.php" class="navbar-brand" >
+  	 	  <img src="images/logo.png" width="37" height="37">
   	 </a>
   	 
   	 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav">
@@ -47,6 +47,8 @@
         <li class="nav-item"><a href="<?php echo htmlspecialchars($arr["lj"]); ?>" class="nav-link"><?php echo htmlspecialchars($arr["classname"]); ?></a></li>
     <?php } ?>
 </ul>
+
+<iframe width="300" scrolling="no" height="25" frameborder="0" allowtransparency="true" src="https://i.tianqi.com?c=code&id=10&color=%23C6C6C6&icon=1&py=hengshui&site=12"></iframe>
 
           
   	 	<form onsubmit="showAlert()" class="ml-auto">

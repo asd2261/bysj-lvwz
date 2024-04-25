@@ -112,16 +112,16 @@ color: black;
 						  <?php }
 						  else{
 						  ?>
-						  <td><a href="gdzxxzs.php?page=1">首页</a></td>
-						  <td><a href="gdzxxzs.php?page=<?php echo $page-1;?>">上一页</a></td>
+						  <td><a href="gdlvlx.php?page=1">首页</a></td>
+						  <td><a href="gdlvlx.php?page=<?php echo $page-1;?>">上一页</a></td>
 						  <?php }
 						  if($page==$pages){?>
 						  <td>下一页</td>
 						  <td>尾页</td>
 						  <?php }
 							else{?>
-						  <td><a href="gdzxxzs.php?page=<?php echo $page+1;?>">下一页</a></td>
-						  <td><a href="gdzxxzs.php?page=<?php echo $pages;?>">尾页</a></td>
+						  <td><a href="gdlvlx.php?page=<?php echo $page+1;?>">下一页</a></td>
+						  <td><a href="gdlvlx.php?page=<?php echo $pages;?>">尾页</a></td>
 						  <?php }?>
 					  </tr>
 					  </table>

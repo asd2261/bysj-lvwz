@@ -34,8 +34,8 @@
 
             <!-- 侧边栏 - 品牌标识 -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                <div class="sidebar-brand-icon ">
+                <img src="img/logo.png" alt="Logo" style="width: 40px; height: 40px;">
                 </div>
                 <div class="sidebar-brand-text mx-3">风景如画后台</div>
             </a>
@@ -82,7 +82,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>导航栏分类管理</span>
+                    <span>导航分类管理</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">

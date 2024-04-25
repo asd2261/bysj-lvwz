@@ -15,12 +15,13 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <!-- 引入我们自己的首页样式文件 -->
   <link rel="stylesheet" href="css/style.css">
- 
+  <link rel="Shortcut Icon" href="images/1.ico" type="image/x-icon" />
+
   <title>风景如画旅游网</title>
 </head>
 
 <body>
-  
+  <!--滚动banner-->
  <?php require 'banner.php';?>
     
  <table width="1400" border="0" cellspacing="0" cellpadding="0">
