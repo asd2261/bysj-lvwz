@@ -31,4 +31,4 @@
 ![1714375721698](https://github.com/asd2261/bysj-lvwz/assets/139621324/d9e956a9-6f2a-4654-b7cc-ddc38a3355be)
 
 ## 六、感谢
-感谢我的老师及[SB Admin 2](https://github.com/startbootstrap/startbootstrap-sb-admin-2)项目团队的帮助和指导。
+感谢我的老师及[SB Admin 2](https://github.com/startbootstrap/startbootstrap-sb-admin-2)项目团队的项目，感谢大家的帮助和指导。
