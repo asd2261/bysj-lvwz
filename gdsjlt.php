@@ -98,7 +98,7 @@
                                 echo '<div class="card mb-4">';
                                 // 将整个卡片内容包裹在 <a> 标签中
                                 echo '<a href="sjltdt.php?id=' . $rows3['id'] . '" class="card-link">';
-                                echo '<img class="card-img-top" src="admin/' . $rows3['img'] . '" alt="" style="width: 100%; height: 200px; object-fit: cover;">';
+                                echo '<img class="card-img-top" src="AAAA/' . $rows3['img'] . '" alt="" style="width: 100%; height: 200px; object-fit: cover;">';
                                 echo '<div class="card-body">';
                                 
                                 // 修改标题显示，最多13个字符

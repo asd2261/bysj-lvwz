@@ -10,6 +10,7 @@
   <![endif]-->
   <!-- 引入bootstrap 样式文件 -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="Shortcut Icon" href="images/1.ico" type="image/x-icon" />
   <!-- 引入字体图标样式 -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <!-- 引入我们自己的首页样式文件 -->

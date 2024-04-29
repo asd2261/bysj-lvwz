@@ -50,6 +50,9 @@ $rows=mysqli_fetch_array($result);
         font-size: 16px;
         line-height: 1.6;
     }
+    
+
+    
 </style>
 
 </head>
@@ -105,7 +108,47 @@ $rows=mysqli_fetch_array($result);
     </td>
 </tr>
 <tr>
-    <td><img src="admin/<?php echo $rows3['img']; ?>" class="img-fluid" alt="Image"></td>
+<?php
+// 检查 $rows3["sjsm"] 是否包含图片标签
+if (preg_match('/<img\s.*?>/', $rows3["sjsm"])) {
+    // 提取图片URL
+    preg_match('/<img\s.*?src="(.*?)".*?>/', $rows3["sjsm"], $matches);
+    $imgUrls = $matches[1];
+    // 将图片URL放入数组中
+    $images = explode(',', $imgUrls);
+    ?>
+    <!-- 轮播容器 -->
+    <div id="imageCarousel" class="carousel">
+        <!-- 默认图片 -->
+        <img src="AAAA/<?php echo $rows3['img']; ?>" class="img-fluid" alt="Image">
+        <!-- 轮播中的图片 -->
+        <?php foreach ($images as $imgUrl) { ?>
+            <img src="<?php echo $imgUrl; ?>" class="img-fluid" alt="Image" style="display: none;">
+        <?php } ?>
+    </div>
+    <!-- JavaScript：轮播逻辑 -->
+    <script>
+    var currentIndex = 0;
+    var images = document.querySelectorAll('#imageCarousel .img-fluid');
+    setInterval(function() {
+        // 隐藏当前图片
+        images[currentIndex].style.display = 'none';
+        // 计算下一张图片的索引
+        currentIndex = (currentIndex + 1) % images.length;
+        // 显示下一张图片
+        images[currentIndex].style.display = 'block';
+    }, 3000); // 每3000毫秒切换一次图片
+    </script>
+    <?php
+} else {
+    // 如果不包含图片，则只显示默认图片
+    ?>
+    <img src="AAAA/<?php echo $rows3['img']; ?>" class="img-fluid" alt="Image">
+    <?php
+}
+?>
+
+
 </tr>
 
                             <?php } ?>

@@ -19,11 +19,10 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <!-- 引入自定义样式 -->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet"><br>
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
  <!-- 引入富文本 -->
 <script charset="utf-8" src="kindedit/kindeditor.js"></script>
 <script> KE.show({id : 'editor_id'});</script>
-
 </head>
 <body id="page-top">
       <!-- 页面包装器 -->
@@ -90,7 +89,6 @@ include("conn.php");
                     <label for="content">新闻内容：</label>
                     <textarea id="editor_id" name="content" class="form-control" rows="10"></textarea>
 </div>
-
                 <div class="form-group">
                     <input type="submit" value="提交" class="btn btn-primary" />
                 </div>

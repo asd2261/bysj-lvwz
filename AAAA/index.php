@@ -1,7 +1,7 @@
 <?php require_once('yz.php'); ?>
 <!DOCTYPE html>
 <html lang="zh">
-
+ <!--sb admin2前端框架模板 -->
 <head>
 
     <!-- 设置字符集 -->
@@ -12,9 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- 页面描述 -->
     <meta name="description" content="">
-    <!-- 作者信息 -->
     <meta name="author" content="">
-
+    <link rel="Shortcut Icon" href="img/1.ico" type="image/x-icon" />
     <!-- 页面标题 -->
     <title>风景如画后台管理系统</title>
 
