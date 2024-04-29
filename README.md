@@ -21,7 +21,7 @@
 ### 1.前端主界面
 ![屏幕截图_29-4-2024_152716_localhost](https://github.com/asd2261/bysj-lvwz/assets/139621324/d0e7218b-a522-4ccd-93c0-efa890e7a345)
 
-### 2.子界面
+### 2.前端子界面
 ![屏幕截图_29-4-2024_153318_localhost](https://github.com/asd2261/bysj-lvwz/assets/139621324/efe79ec3-f6ae-4ab8-95bc-85524b19c47c)
 
 ### 3.后端主界面
