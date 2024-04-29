@@ -18,13 +18,16 @@
 详细描述了系统的功能模块设计、总体结构设计以及数据库设计等内容，提供了系统的完整设计和实现方案。
 
 ## 五、前后端界面图
-前端主界面
+### 1.前端主界面
 ![屏幕截图_29-4-2024_152716_localhost](https://github.com/asd2261/bysj-lvwz/assets/139621324/d0e7218b-a522-4ccd-93c0-efa890e7a345)
-子界面
+
+### 2.子界面
 ![屏幕截图_29-4-2024_153318_localhost](https://github.com/asd2261/bysj-lvwz/assets/139621324/efe79ec3-f6ae-4ab8-95bc-85524b19c47c)
-后端主界面
+
+### 3.后端主界面
 ![1714375670771](https://github.com/asd2261/bysj-lvwz/assets/139621324/5505f618-a9e9-44a6-b759-440ee9e3e34c)
-后端子界面
+
+### 4.后端子界面
 ![1714375721698](https://github.com/asd2261/bysj-lvwz/assets/139621324/d9e956a9-6f2a-4654-b7cc-ddc38a3355be)
 
 ## 六、感谢
